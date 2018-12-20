@@ -25,4 +25,13 @@ $(document).ready(function(){
         $("#fadeDiv").fadeTo('slow',0.5);
     })
 
+    // Slide Example
+
+    $("#flip").click(function(){
+        $("#panel").slideDown();
+    });
+    $("#flip").click(function(){
+        $("#panel").slideUp();
+      });
+
 });
