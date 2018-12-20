@@ -28,10 +28,41 @@ $(document).ready(function(){
     // Slide Example
 
     $("#flip").click(function(){
-        $("#panel").slideDown();
+        $("#panel").slideToggle(1000);    //slideUp() and SlideDown() are two other functions
     });
-    $("#flip").click(function(){
-        $("#panel").slideUp();
+    // $("#flip").click(function(){
+    //     $("#panel").slideUp();
+    //   });
+
+    // ANimation Example
+
+    $("#startAnimation").click(function(){
+        $("#boxAni").animate({left:'250px'})
+    });
+
+    $("#multipleAnimation").click(function(){
+        $("#boxAni2").animate({
+            left:'250px',
+            opacity:'0.5',
+            height:'150px',
+            width:'150px'
+        })
+    });
+
+    $("#relativeAnimation").click(function(){
+        $("#boxAni3").animate({
+            left:'+=20px',
+            height:'toggle'
+        })
+    });
+
+    $("#queueAnimation").click(function(){
+        var div = $("#boxAni4");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "fast");
+        div.animate({height: '100px', opacity: '0.4'}, "fast");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
       });
+
 
 });
