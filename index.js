@@ -37,7 +37,7 @@ $(document).ready(function(){
     // ANimation Example
 
     $("#startAnimation").click(function(){
-        $("#boxAni").animate({left:'250px'})
+        $("#boxAni").animate({left:'1200px'})
     });
 
     $("#multipleAnimation").click(function(){
@@ -64,5 +64,36 @@ $(document).ready(function(){
         div.animate({width: '100px', opacity: '0.8'}, "slow");
       });
 
+    $(".stopAnimation").click(function(){
+        $("div").stop();
+    });
 
+
+    // jQuery HTML
+
+    $("#btn1").click(function(){
+        alert('Text:'+$(".p1").text()) ; 
+    });
+
+    $("#btn2").click(function(){
+        alert('Text:'+$(".p1").html()) ; 
+    });
+
+    $("#btn3").click(function(){
+        alert('Text:'+$("#input").val()) ; 
+    });
+
+
+    // set
+
+    $("#setTxtBtn").click(function(){
+        $("#setP1").text("Text Changed");
+    });
+
+    $("#setHtmlBtn").click(function(){
+        $("#setP2").html("<b>HTML Changed<b/>");
+    });
+    $("#setValBtn").click(function(){
+        $("#setInput").val("Shubham Ingale");
+    });
 });
